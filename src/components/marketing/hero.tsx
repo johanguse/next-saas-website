@@ -58,7 +58,9 @@ export default function Hero({ className }: { className?: string }) {
             <Link
               href="https://nextsaas.app/"
               target="_blank"
-              className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
+              className={cn(
+                buttonVariants({ variant: 'secondary', size: 'lg' })
+              )}
             >
               See the demo
             </Link>

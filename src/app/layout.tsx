@@ -83,7 +83,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
   const isDev = process.env.NODE_ENV === 'development'
 
   return (
-    <html lang="en" suppressHydrationWarning={isDev}>
+    <html lang="en" suppressHydrationWarning>
       <head />
       {!isDev && <GoogleTagManager gtmId="GTM-P8RKZ4JG" />}
       <body
