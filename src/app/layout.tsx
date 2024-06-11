@@ -16,7 +16,6 @@ import HWComponent from '@/components/thirdparty/headwayapp'
 import '@/styles/globals.css'
 
 import { fontHeading, fontSans, fontUrban } from '@/assets/fonts'
-import { env } from '@/root/env.mjs'
 import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -86,10 +85,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning={isDev}>
       <head />
-      {!isDev && env.NEXT_PUBLIC_ANALITYCS_ID && (
-        <GoogleTagManager gtmId={env.NEXT_PUBLIC_ANALITYCS_ID} />
-      )}
-
+      {!isDev && <GoogleTagManager gtmId="GTM-P8RKZ4JG" />}
       <body
         className={cn(
           'isolate min-h-screen bg-background font-sans antialiased',
