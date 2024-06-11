@@ -21,7 +21,7 @@ export default async function IndexPage() {
       >
         <Powered />
       </section>
-      <Features className="mb-36" />
+      <Features className="my-36" />
       <BentoGrid className="mb-36" />
       <section id="pricing" className="py-36">
         <BlockTitle.Wrapper className="mb-36">
@@ -36,33 +36,28 @@ export default async function IndexPage() {
             excepteur.
           </BlockTitle.Description>
           <BlockTitle.Background />
+          <BlockTitle.Separator />
         </BlockTitle.Wrapper>
         <OneCardPricingTable />
       </section>
-
       <section className="mx-auto flex w-full flex-col px-6 py-10 md:w-10/12 md:py-40 lg:max-w-4xl">
         <div className="container mx-auto text-center">
           <BlockTitle.Wrapper className="mb-10">
             <BlockTitle.Header elementType="h1">FAQ</BlockTitle.Header>
-
             <BlockTitle.Title elementType="h2">
               Freequently Asked Questions
             </BlockTitle.Title>
-
             <BlockTitle.Description>
               Explore our comprehensive FAQ to find quick answers to common
               inquiries. If you need further assistance, don&apos;t hesitate to
               contact us for personalized help.
             </BlockTitle.Description>
-
             <BlockTitle.Background />
-
             <BlockTitle.Separator />
           </BlockTitle.Wrapper>
           <FAQ />
         </div>
       </section>
-
       <CtaSubscribe />
     </>
   )

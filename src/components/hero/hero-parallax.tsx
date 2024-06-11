@@ -14,6 +14,8 @@ import { BlockTitle } from '@/components/layout/main-title'
 import SparklesText from '@/components/magicui/sparkles-text'
 
 import FollowTwiiterShineButton from '../marketing/follow-twiiter-shine-button'
+import { AvatarsGroup } from '../ui/avatar-group'
+import StarRating from '../ui/star-rating'
 import {
   MotionValue,
   motion,
@@ -176,9 +178,20 @@ export const Header = () => {
             customers (43 Left)
           </p>
         </BlockTitle.Wrapper>
+        <div className="mb-6 mt-4 flex flex-col items-center justify-center gap-2 md:flex-row">
+          <div className="flex flex-col items-center">
+            <AvatarsGroup />
+          </div>
+          <div className="flex flex-col items-center gap-1 md:items-start">
+            <StarRating />
+            <p className="text-sm font-medium">7 users are already shipping</p>
+          </div>
+        </div>
       </div>
-      <BlockTitle.Wrapper className="pt-40">
-        <BlockTitle.Header elementType="h2">Blocks</BlockTitle.Header>
+      <BlockTitle.Wrapper>
+        <BlockTitle.Header elementType="h2" className="mt-20">
+          Blocks
+        </BlockTitle.Header>
 
         <BlockTitle.Title elementType="h3">Ready-made blocks</BlockTitle.Title>
 
