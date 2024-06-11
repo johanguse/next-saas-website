@@ -33,12 +33,6 @@ export type SidebarNavItem = {
 
 type Icons = {
   twitter: string
-  github: string
-  linkedin: string
-  youtube: string
-  instagram: string
-  facebook: string
-  tiktok: string
 }
 
 type Target = '_blank' | '_self'

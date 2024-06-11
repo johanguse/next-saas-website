@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+
 import Script from 'next/script'
 
 declare global {
@@ -17,7 +18,7 @@ const HWComponent = () => {
     if (!window.HW_config) {
       window.HW_config = {
         selector: '#changelog',
-        account: '7kzOvx',
+        account: 'yEZvvx',
       }
     }
 

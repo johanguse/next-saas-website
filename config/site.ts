@@ -21,36 +21,6 @@ export const siteConfig: SiteConfig = {
         icon: 'twitter',
         href: 'https://twitter.com/SaasTemplate',
       },
-      github: {
-        label: 'GitHub',
-        icon: 'github',
-        href: 'https://twitter.com/SaasTemplate',
-      },
-      linkedin: {
-        label: 'LinkedIn',
-        icon: 'linkedin',
-        href: 'https://twitter.com/SaasTemplate',
-      },
-      youtube: {
-        label: 'YouTube',
-        icon: 'youtube',
-        href: 'https://twitter.com/SaasTemplate',
-      },
-      instagram: {
-        label: 'Instagram',
-        icon: 'instagram',
-        href: 'https://twitter.com/SaasTemplate',
-      },
-      facebook: {
-        label: 'Facebook',
-        icon: 'facebook',
-        href: 'https://twitter.com/SaasTemplate',
-      },
-      tiktok: {
-        label: 'Tiktok',
-        icon: 'tiktok',
-        href: 'https://twitter.com/SaasTemplate',
-      },
     },
   },
 }

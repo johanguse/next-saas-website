@@ -1,17 +1,13 @@
 import { productData } from '@/lib/fake-data/hero-parallax'
-import { testimonialsData } from '@/lib/fake-data/testimonials'
 
-import CarouselLogos from '@/components/carousel/carousel-logos'
 import { HeroParallax } from '@/components/hero/hero-parallax'
 import { BlockTitle } from '@/components/layout/main-title'
 import BentoGrid from '@/components/marketing/bento-grid'
-import CtaSocialMedia from '@/components/marketing/cta-social-media'
 import CtaSubscribe from '@/components/marketing/cta-subscribe'
 import FAQ from '@/components/marketing/faq'
 import Features from '@/components/marketing/features'
 import Hero from '@/components/marketing/hero'
 import Powered from '@/components/marketing/powered'
-import TestimonialCards from '@/components/marketing/testimonials-cards'
 import OneCardPricingTable from '@/components/pricing/pricing-one-card'
 
 export default async function IndexPage() {
@@ -23,15 +19,7 @@ export default async function IndexPage() {
         className="animate-fade-up bg-gray-50 py-8 text-zinc-500 opacity-0 dark:bg-black dark:text-zinc-700 dark:opacity-50"
         style={{ animationDelay: '0.55s', animationFillMode: 'forwards' }}
       >
-        <div className="container mx-auto">
-          <h2 className="mb-6 text-center text-sm font-semibold uppercase">
-            Trusted by
-          </h2>
-
-          <div className="mx-auto flex w-full flex-wrap items-center justify-center gap-10 gap-y-8 lg:max-w-6xl lg:gap-14">
-            <CarouselLogos />
-          </div>
-        </div>
+        <Powered />
       </section>
       <Features />
       <BentoGrid className="mb-36" />
@@ -51,18 +39,7 @@ export default async function IndexPage() {
         </BlockTitle.Wrapper>
         <OneCardPricingTable />
       </section>
-      <section className="mb-36">
-        <BlockTitle.Wrapper className="mb-20">
-          <BlockTitle.Header elementType="h1">Testimonial</BlockTitle.Header>
-          <BlockTitle.Title elementType="h2">
-            See what our customers are saying
-          </BlockTitle.Title>
-          <BlockTitle.Background />
-        </BlockTitle.Wrapper>
-        <TestimonialCards testimonials={testimonialsData} />
-      </section>
-      <Powered />
-      <CtaSocialMedia />
+
       <section className="mx-auto flex w-full flex-col px-6 py-10 md:w-10/12 md:py-40 lg:max-w-4xl">
         <div className="container mx-auto text-center">
           <BlockTitle.Wrapper className="mb-10">
