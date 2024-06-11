@@ -79,7 +79,6 @@ export type BlocksConfig = {
 
 export type MarketingConfig = {
   mainNav: MainNavItem[]
-  multiLevelNav: MainNavItem[]
   footer: {
     links: FooterLink[]
   }

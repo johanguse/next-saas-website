@@ -88,6 +88,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning={isDev}>
       <head />
+      <GoogleTagManager gtmId="GTM-P8RKZ4JG" />
       <body
         className={cn(
           'isolate min-h-screen bg-background font-sans antialiased',
@@ -105,7 +106,6 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
           {children}
           {modal}
 
-          <GoogleTagManager gtmId={googleAnalyticsId} />
           <VercelAnalytics />
           <SpeedInsights />
           <Toaster richColors closeButton position="top-center" />
