@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-import { siteConfig } from '@/config/site'
-
 import { cn } from '@/lib/utils'
 
 import { buttonVariants } from '@/components/ui/button'
@@ -11,8 +9,6 @@ import { Icons } from '@/components/shared/icons'
 import SparklesText from '../magicui/sparkles-text'
 
 export default function Hero({ className }: { className?: string }) {
-  const twitterLink = siteConfig.social?.links?.twitter
-
   return (
     <section className={cn(className)}>
       <section className="space-y-6 pb-12 pt-16 lg:py-28">
@@ -53,28 +49,21 @@ export default function Hero({ className }: { className?: string }) {
             style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}
           >
             <Link
-              href="/pricing"
+              href="/#pricing"
               className={cn(buttonVariants({ size: 'lg' }))}
             >
-              Go Pricing
+              Buy now
             </Link>
-            {twitterLink && (
-              <Link
-                href={twitterLink.href}
-                target="_blank"
-                rel="noreferrer"
-                className={cn(
-                  buttonVariants({ variant: 'outline', size: 'lg' }),
-                  'px-4'
-                )}
-              >
-                <Icons.github className="mr-2 size-4" />
-                <p>
-                  <span className="hidden sm:inline-block">Star on</span> GitHub{' '}
-                </p>
-              </Link>
-            )}
+
+            <Link
+              href="https://nextsaas.app/"
+              target="_blank"
+              className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
+            >
+              See the demo
+            </Link>
           </div>
+
           <div className="absolute inset-0 top-[calc(100%-16rem)] mx-auto h-10 max-w-xs bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-600 via-pink-600 to-blue-600 blur-[118px]  dark:from-rose-400 dark:via-fuchsia-500 dark:to-indigo-500"></div>
         </div>
       </section>

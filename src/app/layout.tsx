@@ -88,7 +88,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning={isDev}>
       <head />
-      <GoogleTagManager gtmId="GTM-P8RKZ4JG" />
+      <GoogleTagManager gtmId={googleAnalyticsId} />
       <body
         className={cn(
           'isolate min-h-screen bg-background font-sans antialiased',
