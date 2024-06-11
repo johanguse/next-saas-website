@@ -105,7 +105,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
           {children}
           {modal}
 
-          {isDev && <GoogleTagManager gtmId={googleAnalyticsId} />}
+          <GoogleTagManager gtmId={googleAnalyticsId} />
           <VercelAnalytics />
           <SpeedInsights />
           <Toaster richColors closeButton position="top-center" />

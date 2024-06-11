@@ -8,7 +8,7 @@ export type ProductType = {
 export const productData: ProductType[] = [
   {
     title: 'Charts',
-    link: '/blocks/charts',
+    link: 'https://nextsaas.app/blocks/charts',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708103855/demo/charts_zhxx8t.jpg',
     thumbnail:
@@ -16,7 +16,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Reviews',
-    link: '/blocks/testimonials',
+    link: 'https://nextsaas.app/blocks/testimonials',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708019728/demo/htdqf2cg3ahnhn6sv7qe.jpg',
     thumbnail:
@@ -24,7 +24,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'FAQ Questions',
-    link: '/blocks/faq',
+    link: 'https://nextsaas.app/blocks/faq',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708019728/demo/sc5lwafgg3v81tmvugdm.jpg',
     thumbnail:
@@ -32,7 +32,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Quotes',
-    link: '/blocks/testimonials',
+    link: 'https://nextsaas.app/blocks/testimonials',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708103856/demo/quotes_dv5e1m.jpg',
     thumbnail:
@@ -40,7 +40,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Charts',
-    link: '/blocks/charts',
+    link: 'https://nextsaas.app/blocks/charts',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708104295/demo/charts2_lamwxm.jpg',
     thumbnail:
@@ -48,7 +48,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Frequently Asked Questions',
-    link: '/blocks/faq',
+    link: 'https://nextsaas.app/blocks/faq',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708024397/demo/main-faq_luuxsv.jpg',
     thumbnail:
@@ -56,7 +56,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Pricing Table',
-    link: '/blocks/pricing-table',
+    link: 'https://nextsaas.app/blocks/pricing-table',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708024397/demo/main-pricing_fxjo3l.jpg',
     thumbnail:
@@ -64,7 +64,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'FAQ Questions',
-    link: '/blocks/faq',
+    link: 'https://nextsaas.app/blocks/faq',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708019728/demo/sc5lwafgg3v81tmvugdm.jpg',
     thumbnail:
@@ -72,7 +72,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Quotes',
-    link: '/blocks/testimonials',
+    link: 'https://nextsaas.app/blocks/testimonials',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708103856/demo/quotes_dv5e1m.jpg',
     thumbnail:
@@ -80,7 +80,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Reviews',
-    link: '/blocks/testimonials',
+    link: 'https://nextsaas.app/blocks/testimonials',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708019728/demo/htdqf2cg3ahnhn6sv7qe.jpg',
     thumbnail:
@@ -88,7 +88,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Logos',
-    link: '/blocks',
+    link: 'https://nextsaas.app/blocks',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708105829/demo/logos_wnyhvd.jpg',
     thumbnail:
@@ -96,7 +96,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Pricing Table',
-    link: '/blocks/pricing-table',
+    link: 'https://nextsaas.app/blocks/pricing-table',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708024397/demo/main-pricing_fxjo3l.jpg',
     thumbnail:
@@ -104,7 +104,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Charts',
-    link: '/blocks/charts',
+    link: 'https://nextsaas.app/blocks/charts',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708104295/demo/charts2_lamwxm.jpg',
     thumbnail:
@@ -112,7 +112,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Logos',
-    link: '/blocks',
+    link: 'https://nextsaas.app/blocks',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708105829/demo/logos_wnyhvd.jpg',
     thumbnail:
@@ -120,7 +120,7 @@ export const productData: ProductType[] = [
   },
   {
     title: 'Pricing Table',
-    link: '/blocks/pricing-table',
+    link: 'https://nextsaas.app/blocks/pricing-table',
     thumbnailDark:
       'https://res.cloudinary.com/nextsaastemplate/image/upload/v1708024397/demo/main-pricing_fxjo3l.jpg',
     thumbnail:

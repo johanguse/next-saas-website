@@ -30,7 +30,7 @@ export const marketingConfig: MarketingConfig = {
     },
     {
       title: 'Blocks',
-      href: '/blocks',
+      href: 'https://nextsaas.app/blocks',
     },
     {
       title: 'Pricing',
