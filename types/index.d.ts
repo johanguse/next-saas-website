@@ -32,14 +32,14 @@ export type SidebarNavItem = {
 )
 
 type Icons = {
-  twitter: string
+  twitter?: string
 }
 
 type Target = '_blank' | '_self'
 
 type SocialLink = {
   label: string
-  icon: keyof typeof Icons
+  icon?: keyof typeof Icons
   href: string
 }
 
@@ -57,8 +57,8 @@ export type SiteConfig = {
   url: string
   ogImage: string
   mailSupport: string
-  social: {
-    links: Record<keyof Icons, SocialLink>
+  social?: {
+    links?: Record<keyof Icons, SocialLink>
   }
 }
 

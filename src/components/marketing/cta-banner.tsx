@@ -50,14 +50,14 @@ export const CtaBanner = () => {
         />
       </div>
       <p className="flex flex-row items-center text-sm">
-        <span>Check out our main demo before buy:</span>
+        Check out our main demo before buy:
         <ButtonUI
           variant="link"
           className="font-semibold"
           href="https://nextsaas.app"
           target="_blank"
         >
-          <strong>nextsaas.app</strong>
+          <span className="font-bold">nextsaas.app</span>
         </ButtonUI>
       </p>
       <div className="flex flex-1 justify-end">
