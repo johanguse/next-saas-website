@@ -2,9 +2,7 @@
 
 import { cn } from '@/lib/utils'
 
-import { useCurrentUser } from '@/hooks/use-current-user'
 import useScroll from '@/hooks/use-scroll'
-import { useSigninModal } from '@/hooks/use-signin-modal'
 
 import { MainNav } from '@/components/layout/navigation/shadcn/main-nav'
 import ButtonShareFeedback from '@/components/shared/button-share-feedback'
@@ -28,8 +26,6 @@ export function NavBar({
   scroll = false,
 }: NavBarProps) {
   const scrolled = useScroll(50)
-  const signInModal = useSigninModal()
-  const user = useCurrentUser()
 
   return (
     <header
