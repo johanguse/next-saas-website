@@ -21,8 +21,6 @@ import { GoogleTagManager } from '@next/third-parties/google'
 import { Analytics as VercelAnalytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
-const googleAnalyticsId = env.NEXT_PUBLIC_ANALITYCS_ID!
-
 interface RootLayoutProps {
   children: React.ReactNode
 }
@@ -88,7 +86,10 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning={isDev}>
       <head />
-      {!isDev && <GoogleTagManager gtmId={googleAnalyticsId} />}
+      {!isDev && env.NEXT_PUBLIC_ANALITYCS_ID && (
+        <GoogleTagManager gtmId={env.NEXT_PUBLIC_ANALITYCS_ID} />
+      )}
+
       <body
         className={cn(
           'isolate min-h-screen bg-background font-sans antialiased',
