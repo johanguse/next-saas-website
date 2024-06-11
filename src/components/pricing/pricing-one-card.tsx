@@ -203,7 +203,7 @@ export default function OneCardPricingTable() {
                 <span className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <span className="px-2 line-through">$199</span>
                   <span className="italic text-gray-700 dark:text-gray-500">
-                    $125
+                    $129.35
                   </span>
                 </span>
                 <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600 dark:text-gray-400">

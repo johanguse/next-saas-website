@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { useCollectEmailsModal } from '@/hooks/use-collect-emails-modal'
 
 import { Button } from '@/components/ui/button'
+import { Button as ButtonUI } from '@/components/ui/button-ui'
 
 import { XIcon } from 'lucide-react'
 
@@ -48,19 +49,16 @@ export const CtaBanner = () => {
           }}
         />
       </div>
-      <p className="text-sm leading-6">
-        <span className="mr-1">
-          <strong className="font-semibold">We are going live soon!</strong> Get
-          notified when launched.
-        </span>
-        <Button
-          size={'sm'}
-          variant={'link'}
-          className="px-0"
-          onClick={collectEmailsModal.onOpen}
+      <p className="flex flex-row items-center text-sm">
+        <span>Check out our main demo before buy:</span>
+        <ButtonUI
+          variant="link"
+          className="font-semibold"
+          href="https://nextsaas.app"
+          target="_blank"
         >
-          Join waitlist
-        </Button>
+          <strong>nextsaas.app</strong>
+        </ButtonUI>
       </p>
       <div className="flex flex-1 justify-end">
         <Button
