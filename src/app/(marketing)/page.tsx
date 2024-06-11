@@ -21,9 +21,9 @@ export default async function IndexPage() {
       >
         <Powered />
       </section>
-      <Features />
+      <Features className="mb-36" />
       <BentoGrid className="mb-36" />
-      <section id="pricing" className="mb-36">
+      <section id="pricing" className="py-36">
         <BlockTitle.Wrapper className="mb-36">
           <BlockTitle.Header elementType="h1">
             Card Pricing table
