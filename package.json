@@ -1,13 +1,13 @@
 {
   "name": "next-saas-website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "author": {
     "name": "SaasTemplate",
     "url": "https://twitter.com/SaasTemplate"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "dev:turbo": "next dev --turbo",
     "dev:clean": "rm -fr node_modules/.cache/contentlayer && contentlayer build && rm -fr .next",
     "build": "contentlayer build && next build",

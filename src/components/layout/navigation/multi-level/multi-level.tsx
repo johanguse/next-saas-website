@@ -12,7 +12,7 @@ import { useCurrentUser } from '@/hooks/use-current-user'
 import useScroll from '@/hooks/use-scroll'
 import { useSigninModal } from '@/hooks/use-signin-modal'
 
-import { Button, buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -23,10 +23,6 @@ import {
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu'
 
-import { ModeToggle } from '@/components/layout/mode-toggle'
-import { UserAccountNav } from '@/components/layout/navigation/user-account-nav'
-import ButtonShareFeedback from '@/components/shared/button-share-feedback'
-import ChangelogButton from '@/components/shared/changelog-button'
 import IconLogo from '@/components/shared/logo-icon'
 
 import { MainNavItem } from '@/root/types'
@@ -111,37 +107,7 @@ export function MultiLevelNav({
         ) : null}
       </div>
       <div className="flex items-center space-x-3">
-        <div className="flex items-center space-x-3">
-          {rightElements}
-
-          {!user ? <LoginLink /> : null}
-
-          {user ? (
-            <>
-              <ul className="mr-4 flex items-center space-x-4">
-                <li>
-                  <ButtonShareFeedback />
-                </li>
-                <li>
-                  <ChangelogButton />
-                </li>
-                <li>
-                  <ModeToggle />
-                </li>
-              </ul>
-              <UserAccountNav user={user} />
-            </>
-          ) : (
-            <Button
-              className="px-3"
-              variant="default"
-              size="sm"
-              onClick={signInModal.onOpen}
-            >
-              Sign In
-            </Button>
-          )}
-        </div>
+        <div className="flex items-center space-x-3">{rightElements}</div>
       </div>
     </header>
   )

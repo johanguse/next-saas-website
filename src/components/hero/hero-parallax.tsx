@@ -6,8 +6,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { ProductType } from '@/lib/fake-data/hero-parallax'
+import { cn } from '@/lib/utils'
+
+import { buttonVariants } from '@/components/ui/button'
 
 import { BlockTitle } from '@/components/layout/main-title'
+import SparklesText from '@/components/magicui/sparkles-text'
 
 import {
   MotionValue,
@@ -18,7 +22,13 @@ import {
 } from 'framer-motion'
 import { useTheme } from 'next-themes'
 
-export const HeroParallax = ({ products }: { products: ProductType[] }) => {
+export const HeroParallax = ({
+  className,
+  products,
+}: {
+  className?: string
+  products: ProductType[]
+}) => {
   const firstRow = products.slice(0, 5)
   const secondRow = products.slice(5, 10)
   const thirdRow = products.slice(10, 15)
@@ -57,7 +67,10 @@ export const HeroParallax = ({ products }: { products: ProductType[] }) => {
   return (
     <div
       ref={ref}
-      className="relative flex h-[230vh]  flex-col self-auto overflow-hidden pt-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className={
+        className +
+        ' relative flex h-[230vh]  flex-col self-auto overflow-hidden pt-40 antialiased [perspective:1000px] [transform-style:preserve-3d]'
+      }
     >
       <Header />
       <motion.div
@@ -103,15 +116,17 @@ export const HeroParallax = ({ products }: { products: ProductType[] }) => {
 
 export const Header = () => {
   return (
-    <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
+    <div className="relative left-0 top-0 z-50 mx-auto w-full max-w-7xl  px-4 py-10 md:py-20">
       <BlockTitle.Wrapper>
         <BlockTitle.Header elementType="h1">Pre Sale</BlockTitle.Header>
 
-        <BlockTitle.Title elementType="h2">
-          Launching Your SaaS Success Story with{' '}
-          <span className="relative bg-gradient-to-r from-indigo-500 to-purple-500/80 bg-clip-text font-extrabold text-transparent">
-            Next SaaS Template
-          </span>
+        <BlockTitle.Title elementType="div">
+          <h2
+            className="my-6 animate-fade-up text-balance font-urban text-5xl font-extrabold tracking-tight opacity-0 sm:text-4xl md:text-5xl lg:text-6xl"
+            style={{ animationDelay: '0.25s', animationFillMode: 'forwards' }}
+          >
+            Launching Your SaaS <SparklesText text="Success Story" />
+          </h2>
         </BlockTitle.Title>
 
         <BlockTitle.Description>
@@ -122,7 +137,21 @@ export const Header = () => {
 
         <BlockTitle.Background />
 
-        <BlockTitle.Separator />
+        <BlockTitle.Separator className="mb-20" />
+
+        <div className="z-50 mx-auto flex flex-row items-center justify-center gap-6 text-center">
+          <Link href="#pricing" className={cn(buttonVariants({ size: 'lg' }))}>
+            Buy now
+          </Link>
+
+          <Link
+            href="https://nextsaas.app/"
+            target="_blank"
+            className={cn(buttonVariants({ variant: 'outline', size: 'lg' }))}
+          >
+            See the demo
+          </Link>
+        </div>
       </BlockTitle.Wrapper>
     </div>
   )

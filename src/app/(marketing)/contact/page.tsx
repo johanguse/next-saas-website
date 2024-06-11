@@ -1,5 +1,3 @@
-import { getCurrentUser } from '@/lib/session'
-
 import ContactForm from '@/components/forms/contact-form'
 import { BlockTitle } from '@/components/layout/main-title'
 
@@ -8,8 +6,6 @@ export const metadata = {
 }
 
 export default async function ContactPage() {
-  const user = await getCurrentUser()
-
   return (
     <div className="flex w-full py-8 md:py-8">
       <div className="container">
@@ -27,7 +23,7 @@ export default async function ContactPage() {
 
             <BlockTitle.Separator />
           </BlockTitle.Wrapper>
-          <ContactForm user={user} />
+          <ContactForm />
         </div>
       </div>
     </div>

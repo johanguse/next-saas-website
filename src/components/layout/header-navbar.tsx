@@ -4,11 +4,7 @@ import { useCurrentUser } from '@/hooks/use-current-user'
 import useScroll from '@/hooks/use-scroll'
 import { useSigninModal } from '@/hooks/use-signin-modal'
 
-import { Button } from '@/components/ui/button'
-
 import { MainNav } from '@/components/layout/navigation/main/main-nav'
-import { UserAccountNav } from '@/components/layout/navigation/user-account-nav'
-import { Icons } from '@/components/shared/icons'
 
 import { MainNavItem } from '@/root/types'
 import { User } from 'next-auth'
@@ -40,23 +36,7 @@ export function NavBar({
       <div className="container flex h-[60px] items-center justify-between py-4">
         <MainNav items={items}>{children}</MainNav>
 
-        <div className="flex items-center space-x-3">
-          {rightElements}
-
-          {user ? (
-            <UserAccountNav user={user} />
-          ) : (
-            <Button
-              className="gap-2 px-4"
-              variant="default"
-              size="sm"
-              onClick={signInModal.onOpen}
-            >
-              <span>Sign In</span>
-              <Icons.arrowRight className="size-4" />
-            </Button>
-          )}
-        </div>
+        <div className="flex items-center space-x-3">{rightElements}</div>
       </div>
     </header>
   )

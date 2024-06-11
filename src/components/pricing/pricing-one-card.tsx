@@ -4,7 +4,7 @@ export default function OneCardPricingTable() {
       <div className="mx-auto mt-8 max-w-2xl gap-4 rounded-3xl ring-1 ring-gray-200 dark:ring-gray-700 sm:mt-12 lg:mx-0 lg:flex lg:max-w-none">
         <div className="p-8 dark:text-white sm:p-10 lg:flex-auto">
           <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">
-            Monthly Pricing
+            One time purchase
           </h1>
           <p className="mt-6 text-base leading-7 text-gray-600 dark:text-gray-400">
             Choose our monthly subscription plan that would suit your extra
@@ -197,13 +197,13 @@ export default function OneCardPricingTable() {
           <div className="h-full rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 dark:bg-gray-900 lg:flex lg:flex-col lg:justify-center lg:py-16">
             <div className="mx-auto max-w-xs px-2">
               <p className="text-base font-semibold text-gray-600 dark:text-gray-400">
-                Monthly
+                Lifetime
               </p>
               <p className="mb-12 mt-6 flex items-baseline justify-center gap-x-2">
                 <span className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
-                  <span className="px-2 line-through">$29</span>
+                  <span className="px-2 line-through">$199</span>
                   <span className="italic text-gray-700 dark:text-gray-500">
-                    FREE*
+                    $125
                   </span>
                 </span>
                 <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600 dark:text-gray-400">
@@ -211,7 +211,7 @@ export default function OneCardPricingTable() {
                 </span>
               </p>
               <a
-                href="/signup"
+                href="https://buy.stripe.com/bIY9BE2cvgFb8CI288?prefilled_promo_code=LAUNCH"
                 className="my-6 block w-full rounded-sm bg-blue-600 py-2 text-white dark:bg-white dark:text-gray-800"
               >
                 Get Started →

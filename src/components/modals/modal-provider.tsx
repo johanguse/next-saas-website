@@ -3,7 +3,6 @@
 import { useMounted } from '@/hooks/use-mounted'
 
 import { CollectEmailsModal } from '@/components/modals/collect-emails-modal'
-import { SignInModal } from '@/components/modals/sign-in-modal'
 
 export const ModalProvider = () => {
   const mounted = useMounted()
@@ -14,7 +13,6 @@ export const ModalProvider = () => {
 
   return (
     <>
-      <SignInModal />
       <CollectEmailsModal />
       {/* add your own modals here... */}
     </>

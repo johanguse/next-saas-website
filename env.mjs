@@ -6,14 +6,8 @@ export const env = createEnv({
     NODE_ENV: z.enum(['development', 'test', 'production'], {
       default: 'development',
     }),
-    POSTGRES_DATABASE_URL: z.string().url(),
-    NEXTAUTH_SECRET: z.string().min(1),
-    GOOGLE_CLIENT_ID: z.string().min(1),
-    GOOGLE_CLIENT_SECRET: z.string().min(1),
-    GITHUB_CLIENT_SECRET: z.string().min(1),
-    GITHUB_CLIENT_ID: z.string().min(1),
-    STRIPE_SECRET_API_KEY: z.string().min(1),
-    STRIPE_WEBHOOK_SECRET: z.string().min(1),
+    STRIPE_SECRET_API_KEY: z.string().min(1).optional(),
+    STRIPE_WEBHOOK_SECRET: z.string().min(1).optional(),
     RESEND_USERNAME: z.string().min(1),
     RESEND_API_KEY: z.string().min(1),
     RESEND_EMAIL_SERVER_USER: z.string().min(1),
@@ -24,39 +18,11 @@ export const env = createEnv({
   client: {
     NEXT_PUBLIC_ANALITYCS_ID: z.string().min(1).optional(),
     NEXT_PUBLIC_APP_URL: z.string().min(1).optional(),
-    NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID: z.string().min(1),
-    NEXT_PUBLIC_STRIPE_PRO_YEARLY_PLAN_ID: z.string().min(1),
-    NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID: z.string().min(1),
-    NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID: z.string().min(1),
-    NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID: z.string().min(1).optional(),
-    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: z.string().min(1).optional(),
   },
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
-    POSTGRES_DATABASE_URL: process.env.POSTGRES_DATABASE_URL,
     NEXT_PUBLIC_ANALITYCS_ID: process.env.NEXT_PUBLIC_ANALITYCS_ID,
-    // Auth v5
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
-    GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
-    GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
-    GITHUB_CLIENT_SECRET: process.env.GITHUB_CLIENT_SECRET,
-    GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
-    // Stripe
-    STRIPE_SECRET_API_KEY: process.env.STRIPE_SECRET_API_KEY,
-    STRIPE_WEBHOOK_SECRET: process.env.STRIPE_WEBHOOK_SECRET,
-    NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID:
-      process.env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PLAN_ID,
-    NEXT_PUBLIC_STRIPE_PRO_YEARLY_PLAN_ID:
-      process.env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PLAN_ID,
-    NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID:
-      process.env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PLAN_ID,
-    NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID:
-      process.env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PLAN_ID,
-    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY:
-      process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY,
-    NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID:
-      process.env.NEXT_PUBLIC_STRIPE_PRICING_TABLE_ID,
     // Resend
     RESEND_USERNAME: process.env.RESEND_USERNAME,
     RESEND_API_KEY: process.env.RESEND_API_KEY,

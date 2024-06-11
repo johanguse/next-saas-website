@@ -6,14 +6,11 @@ import { useCurrentUser } from '@/hooks/use-current-user'
 import useScroll from '@/hooks/use-scroll'
 import { useSigninModal } from '@/hooks/use-signin-modal'
 
-import { Button } from '@/components/ui/button'
-
 import { MainNav } from '@/components/layout/navigation/shadcn/main-nav'
-import { UserAccountNav } from '@/components/layout/navigation/user-account-nav'
-import AuthLink from '@/components/shared/auth-link'
 import ButtonShareFeedback from '@/components/shared/button-share-feedback'
 import ChangelogButton from '@/components/shared/changelog-button'
 
+import { ModeToggle } from '../../mode-toggle'
 import MobileSheetMenu from '../shadcn/mobile-sheet-menu'
 import { MainNavItem } from '@/root/types'
 
@@ -48,46 +45,20 @@ export function NavBar({
         <div className="flex items-center space-x-3">
           {rightElements}
 
-          {!user && (
-            <>
-              <ChangelogButton />
-              <AuthLink
-                variant="outline"
-                href="/login"
-                text="Login Page"
-                className="hidden md:flex"
-              />
-            </>
-          )}
+          <>
+            <ul className="mr-4 flex items-center space-x-4">
+              <li>
+                <ChangelogButton />
+              </li>
+              <li>
+                <ButtonShareFeedback />
+              </li>
+              <li>
+                <ModeToggle />
+              </li>
+            </ul>
+          </>
 
-          {user && (
-            <>
-              <ul className="mr-4 hidden items-center space-x-4 md:flex">
-                <li>
-                  <ButtonShareFeedback />
-                </li>
-              </ul>
-              <UserAccountNav user={user} />
-            </>
-          )}
-
-          {!user && (
-            <>
-              <Button
-                className="hidden px-3 md:block"
-                variant="default"
-                size="sm"
-                onClick={signInModal.onOpen}
-              >
-                Sign In
-              </Button>
-              <AuthLink
-                href="/register"
-                text="Sign in"
-                className={'flex md:hidden'}
-              />
-            </>
-          )}
           <MobileSheetMenu />
         </div>
       </div>

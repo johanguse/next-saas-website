@@ -10,11 +10,11 @@ import { Icons } from '@/components/shared/icons'
 
 import SparklesText from '../magicui/sparkles-text'
 
-export default function Hero() {
+export default function Hero({ className }: { className?: string }) {
   const twitterLink = siteConfig.social?.links?.twitter
 
   return (
-    <section>
+    <section className={cn(className)}>
       <section className="space-y-6 pb-12 pt-16 lg:py-28">
         <div className="container relative flex max-w-5xl flex-col items-center gap-5 text-center">
           <div className="my-6 flex items-center justify-center rounded bg-black">

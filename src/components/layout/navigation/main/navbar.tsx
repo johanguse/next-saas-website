@@ -8,13 +8,13 @@ import { useCurrentUser } from '@/hooks/use-current-user'
 import useScroll from '@/hooks/use-scroll'
 import { useSigninModal } from '@/hooks/use-signin-modal'
 
-import { Button, buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 
 import { MainNav } from '@/components/layout/navigation/main/main-nav'
-import { UserAccountNav } from '@/components/layout/navigation/user-account-nav'
 import ButtonShareFeedback from '@/components/shared/button-share-feedback'
 import ChangelogButton from '@/components/shared/changelog-button'
 
+import { ModeToggle } from '../../mode-toggle'
 import { MainNavItem } from '@/root/types'
 
 interface NavBarProps {
@@ -59,31 +59,18 @@ export function NavBar({
 
           {!user && (
             <>
-              <ChangelogButton />
-              <LoginLink />
-            </>
-          )}
-
-          {user && (
-            <>
               <ul className="mr-4 flex items-center space-x-4">
+                <li>
+                  <ChangelogButton />
+                </li>
                 <li>
                   <ButtonShareFeedback />
                 </li>
+                <li>
+                  <ModeToggle />
+                </li>
               </ul>
-              <UserAccountNav user={user} />
             </>
-          )}
-
-          {!user && (
-            <Button
-              className="px-3"
-              variant="default"
-              size="sm"
-              onClick={signInModal.onOpen}
-            >
-              Sign In
-            </Button>
           )}
         </div>
       </div>

@@ -5,20 +5,18 @@ import Link from 'next/link'
 import { marketingConfig } from '@/config/marketing'
 import { siteConfig } from '@/config/site'
 
-import { getCurrentUser } from '@/lib/session'
 import { cn } from '@/lib/utils'
 
 import { ModeToggle } from '@/components/layout/mode-toggle'
-import ChangelogButton from '@/components/shared/changelog-button'
 import { Icons } from '@/components/shared/icons'
 import IconLogo from '@/components/shared/logo-icon'
 
+import ButtonShareFeedback from '../shared/button-share-feedback'
 import { SocialLink } from '@/root/types'
 
 export async function SiteFooter({
   className,
 }: React.HTMLAttributes<HTMLElement>) {
-  const user = await getCurrentUser()
   const footerSocialLinks: SocialLink[] = Object.entries(
     siteConfig.social?.links ?? {}
   ).map(([key, value]) => ({
@@ -76,27 +74,12 @@ export async function SiteFooter({
             .
           </div>
           <div className="mt-6 sm:mt-0">
-            <ul className="flex items-center space-x-4">
-              {user && (
-                <>
-                  <li>
-                    <Link href="/dashboard">
-                      <span className="sr-only">Dashboard</span>
-                      {React.createElement(Icons.user, {
-                        height: 24,
-                        width: 24,
-                        className: 'text-gray-600 dark:text-gray-400',
-                        'aria-hidden': 'true',
-                      })}
-                    </Link>
-                  </li>
-                  <li>
-                    <ChangelogButton />
-                  </li>
-                </>
-              )}
+            <ul className="mr-4 flex items-center space-x-4">
               <li>
                 <ModeToggle />
+              </li>
+              <li>
+                <ButtonShareFeedback />
               </li>
             </ul>
           </div>

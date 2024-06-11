@@ -1,6 +1,8 @@
+import { productData } from '@/lib/fake-data/hero-parallax'
 import { testimonialsData } from '@/lib/fake-data/testimonials'
 
 import CarouselLogos from '@/components/carousel/carousel-logos'
+import { HeroParallax } from '@/components/hero/hero-parallax'
 import { BlockTitle } from '@/components/layout/main-title'
 import BentoGrid from '@/components/marketing/bento-grid'
 import CtaSocialMedia from '@/components/marketing/cta-social-media'
@@ -8,15 +10,15 @@ import CtaSubscribe from '@/components/marketing/cta-subscribe'
 import FAQ from '@/components/marketing/faq'
 import Features from '@/components/marketing/features'
 import Hero from '@/components/marketing/hero'
-import LatestFromBlog from '@/components/marketing/lastest-from-blog'
-import PlansMarketing from '@/components/marketing/plans'
 import Powered from '@/components/marketing/powered'
 import TestimonialCards from '@/components/marketing/testimonials-cards'
+import OneCardPricingTable from '@/components/pricing/pricing-one-card'
 
 export default async function IndexPage() {
   return (
     <>
-      <Hero />
+      <Hero className="flex lg:hidden" />
+      <HeroParallax className="hidden lg:flex" products={productData} />
       <section
         className="animate-fade-up bg-gray-50 py-8 text-zinc-500 opacity-0 dark:bg-black dark:text-zinc-700 dark:opacity-50"
         style={{ animationDelay: '0.55s', animationFillMode: 'forwards' }}
@@ -33,7 +35,7 @@ export default async function IndexPage() {
       </section>
       <Features />
       <BentoGrid className="mb-36" />
-      <section className="mb-36">
+      <section id="pricing" className="mb-36">
         <BlockTitle.Wrapper className="mb-36">
           <BlockTitle.Header elementType="h1">
             Card Pricing table
@@ -47,7 +49,7 @@ export default async function IndexPage() {
           </BlockTitle.Description>
           <BlockTitle.Background />
         </BlockTitle.Wrapper>
-        <PlansMarketing />
+        <OneCardPricingTable />
       </section>
       <section className="mb-36">
         <BlockTitle.Wrapper className="mb-20">
@@ -60,7 +62,6 @@ export default async function IndexPage() {
         <TestimonialCards testimonials={testimonialsData} />
       </section>
       <Powered />
-      <LatestFromBlog />
       <CtaSocialMedia />
       <section className="mx-auto flex w-full flex-col px-6 py-10 md:w-10/12 md:py-40 lg:max-w-4xl">
         <div className="container mx-auto text-center">

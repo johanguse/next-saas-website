@@ -10,8 +10,6 @@ import { siteConfig } from '@/config/site'
 
 import { cn } from '@/lib/utils'
 
-import { useCurrentUser } from '@/hooks/use-current-user'
-
 import { Button } from '@/components/ui/button'
 import {
   Sheet,
@@ -20,7 +18,6 @@ import {
   SheetTrigger,
 } from '@/components/ui/sheet'
 
-import AuthLink from '@/components/shared/auth-link'
 import ButtonShareFeedback from '@/components/shared/button-share-feedback'
 import IconLogo from '@/components/shared/logo-icon'
 
@@ -28,12 +25,11 @@ import { Menu } from 'lucide-react'
 
 export default function MobileSheetMenu() {
   const [open, setOpen] = React.useState(false)
-  const user = useCurrentUser()
 
   return (
     <div>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetTrigger asChild>
+        <SheetTrigger asChild className="bg-slate-100 dark:bg-slate-800">
           <Button variant="outline" className="mx-auto flex lg:hidden">
             Menu <Menu className="ml-2 size-4" />
             <span className="sr-only">Toggle Menu</span>
@@ -61,14 +57,7 @@ export default function MobileSheetMenu() {
             )}
           </div>
           <div className="mt-8 flex flex-col space-y-2">
-            {user ? (
-              <ButtonShareFeedback />
-            ) : (
-              <>
-                <AuthLink variant="outline" href="/login" text="Login Page" />
-                <AuthLink href="/register" text="Sign in" />
-              </>
-            )}
+            <ButtonShareFeedback />
           </div>
         </SheetContent>
       </Sheet>
