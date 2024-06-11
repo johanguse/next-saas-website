@@ -1,12 +1,12 @@
 import { productData } from '@/lib/fake-data/hero-parallax'
 
 import { HeroParallax } from '@/components/hero/hero-parallax'
+import Hero from '@/components/hero/hero-regular'
 import { BlockTitle } from '@/components/layout/main-title'
 import BentoGrid from '@/components/marketing/bento-grid'
 import CtaSubscribe from '@/components/marketing/cta-subscribe'
 import FAQ from '@/components/marketing/faq'
 import Features from '@/components/marketing/features'
-import Hero from '@/components/marketing/hero'
 import Powered from '@/components/marketing/powered'
 import OneCardPricingTable from '@/components/pricing/pricing-one-card'
 
