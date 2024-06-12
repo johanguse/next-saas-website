@@ -8,14 +8,15 @@ import Link from 'next/link'
 import { ProductType } from '@/lib/fake-data/hero-parallax'
 import { cn } from '@/lib/utils'
 
+import { AvatarsGroup } from '@/components/ui/avatar-group'
 import { buttonVariants } from '@/components/ui/button'
+import StarRating from '@/components/ui/star-rating'
 
 import { BlockTitle } from '@/components/layout/main-title'
 import SparklesText from '@/components/magicui/sparkles-text'
+import FollowTwiiterShineButton from '@/components/marketing/follow-twiiter-shine-button'
+import { Icons } from '@/components/shared/icons'
 
-import FollowTwiiterShineButton from '../marketing/follow-twiiter-shine-button'
-import { AvatarsGroup } from '../ui/avatar-group'
-import StarRating from '../ui/star-rating'
 import {
   MotionValue,
   motion,
@@ -85,7 +86,7 @@ export const HeroParallax = ({
         }}
         className=""
       >
-        <motion.div className="mb-20 flex flex-row-reverse space-x-20 space-x-reverse">
+        <motion.div className="mb-10 flex flex-row-reverse space-x-20 space-x-reverse">
           {firstRow.map((product) => (
             <ProductCard
               product={product}
@@ -94,7 +95,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="mb-20 flex  flex-row space-x-20 ">
+        <motion.div className="mb-10 flex  flex-row space-x-20 ">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -187,9 +188,14 @@ export const Header = () => {
             <p className="text-sm font-medium">7 users are already shipping</p>
           </div>
         </div>
+        <div className="mt-20 flex">
+          <div className="relative mx-auto size-10 animate-bounce">
+            <Icons.chevronDown className="absolute -inset-1 size-10 animate-pulse rounded-full" />
+          </div>
+        </div>
       </div>
       <BlockTitle.Wrapper>
-        <BlockTitle.Header elementType="h2" className="mt-20">
+        <BlockTitle.Header elementType="h2" className="mt-10">
           Blocks
         </BlockTitle.Header>
 

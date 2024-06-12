@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BellRing,
   Check,
+  ChevronDown,
   ChevronLeft,
   ChevronRight,
   Copy,
@@ -76,7 +77,7 @@ export const Icons = {
       />
     </svg>
   ),
-
+  chevronDown: ChevronDown,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
   check: Check,

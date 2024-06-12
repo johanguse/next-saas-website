@@ -1,10 +1,12 @@
 'use client'
 
 import * as React from 'react'
-import * as SelectPrimitive from '@radix-ui/react-select'
-import { Check, ChevronDown } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
+
+import * as SelectPrimitive from '@radix-ui/react-select'
+
+import { Icons } from '@/components/shared/icons'
 
 const Select = SelectPrimitive.Root
 
@@ -26,7 +28,7 @@ const SelectTrigger = React.forwardRef<
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <ChevronDown className="size-4 opacity-50" />
+      <Icons.chevronDown className="size-4 opacity-50" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 ))
@@ -40,7 +42,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        'relative z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-80',
+        'relative z-50 min-w-32 overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-80',
         position === 'popper' && 'translate-y-1',
         className
       )}
@@ -87,7 +89,7 @@ const SelectItem = React.forwardRef<
   >
     <span className="absolute left-2 flex size-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <Check className="size-4" />
+        <Icons.check className="size-4" />
       </SelectPrimitive.ItemIndicator>
     </span>
 
