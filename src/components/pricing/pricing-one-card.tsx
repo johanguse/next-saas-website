@@ -1,3 +1,7 @@
+import { Badge } from '@/components/ui/badge'
+
+import TimeAgo from '@/components/time-ago'
+
 export default function OneCardPricingTable() {
   return (
     <div className="container relative z-20 mx-auto max-w-7xl lg:px-8">
@@ -168,7 +172,7 @@ export default function OneCardPricingTable() {
               <p className="text-base font-semibold text-gray-600 dark:text-gray-400">
                 Lifetime
               </p>
-              <p className="mb-12 mt-6 flex items-baseline justify-center gap-x-2">
+              <p className="my-6 flex items-baseline justify-center gap-x-2">
                 <span className="text-5xl font-bold tracking-tight text-gray-900 dark:text-white">
                   <span className="px-2 text-gray-700 line-through dark:text-gray-500">
                     $199
@@ -179,6 +183,10 @@ export default function OneCardPricingTable() {
                   USD
                 </span>
               </p>
+              <Badge className="mb-6">
+                <span className="mr-1">Last update:</span>
+                <TimeAgo createdAt="June 15, 2024 06:00" />
+              </Badge>
               <a
                 //href="https://buy.stripe.com/bIY9BE2cvgFb8CI288?prefilled_promo_code=LAUNCH"
                 href="https://bit.ly/NST-LAUNCH1"
@@ -186,9 +194,6 @@ export default function OneCardPricingTable() {
               >
                 Get Started →
               </a>
-              <p className="mt-6 text-xs leading-5 text-gray-600 dark:text-gray-400">
-                Invoices and receipts available for easy company reimbursement
-              </p>
             </div>
           </div>
         </div>

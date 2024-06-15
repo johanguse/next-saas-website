@@ -88,6 +88,7 @@
     "next-contentlayer": "^0.3.4",
     "next-share": "^0.27.0",
     "next-themes": "^0.3.0",
+    "next-timeago": "^0.2.0",
     "pliny": "^0.2.2",
     "prop-types": "^15.8.1",
     "ramda": "^0.29.1",

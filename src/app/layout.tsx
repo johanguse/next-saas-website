@@ -12,6 +12,7 @@ import { ModalProvider } from '@/components/modals/modal-provider'
 import { Providers } from '@/components/providers'
 import { TailwindIndicator } from '@/components/tailwind-indicator'
 import HWComponent from '@/components/thirdparty/headwayapp'
+import PDComponent from '@/components/thirdparty/paritydeals'
 
 import '@/styles/globals.css'
 
@@ -109,6 +110,7 @@ export default function RootLayout({ children, modal }: RootLayoutProps) {
           <ModalProvider />
           <TailwindIndicator />
           <HWComponent />
+          <PDComponent />
         </Providers>
       </body>
     </html>

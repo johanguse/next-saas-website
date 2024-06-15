@@ -21,19 +21,16 @@ export default async function IndexPage() {
       >
         <Powered />
       </section>
-      <Features className="my-36" />
-      <BentoGrid className="mb-36" />
-      <section id="pricing" className="py-36">
-        <BlockTitle.Wrapper className="mb-36">
-          <BlockTitle.Header elementType="h1">
-            Card Pricing table
-          </BlockTitle.Header>
+      <Features className="my-24" />
+      <BentoGrid className="mb-24" />
+      <section id="pricing" className="py-24">
+        <BlockTitle.Wrapper className="mb-24">
+          <BlockTitle.Header elementType="h1">Pricing</BlockTitle.Header>
           <BlockTitle.Title elementType="h2">
-            One card for all your needs
+            Buy once and build unlimited projects
           </BlockTitle.Title>
           <BlockTitle.Description>
-            Pariatur laborum dolor ea commodo sit aute aliquip qui et cillum
-            excepteur.
+            Buy on pre-sale and save up to 35%
           </BlockTitle.Description>
           <BlockTitle.Background />
           <BlockTitle.Separator />
