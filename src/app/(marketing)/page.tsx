@@ -36,7 +36,10 @@ export default async function IndexPage() {
           <BlockTitle.Separator />
         </BlockTitle.Wrapper>
         <OneCardPricingTable />
-        <div className="container mt-2" id="pricing-paritydeals"></div>
+        <div
+          className="container mx-auto mt-4 max-w-7xl lg:px-8"
+          id="pricing-paritydeals"
+        ></div>
       </section>
       <section className="mx-auto flex w-full flex-col px-6 py-10 md:w-10/12 md:py-40 lg:max-w-4xl">
         <div className="container mx-auto text-center">
