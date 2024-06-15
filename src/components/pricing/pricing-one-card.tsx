@@ -1,10 +1,41 @@
 import { Badge } from '@/components/ui/badge'
+import { Button as ButtonUI } from '@/components/ui/button-ui'
 
+import { BlockTitle } from '@/components/layout/main-title'
 import TimeAgo from '@/components/time-ago'
 
 export default function OneCardPricingTable() {
   return (
     <div className="container relative z-20 mx-auto max-w-7xl lg:px-8">
+      <BlockTitle.Wrapper className="mb-24">
+        <BlockTitle.Header elementType="h1">Pricing</BlockTitle.Header>
+        <BlockTitle.Title elementType="h2">
+          Buy once and build unlimited projects
+        </BlockTitle.Title>
+        <BlockTitle.Description>
+          Buy on pre-sale and save up to 35%
+        </BlockTitle.Description>
+        <BlockTitle.Background />
+        <BlockTitle.Separator />
+        <div className="flex flex-row gap-4">
+          <ButtonUI
+            variant="link"
+            className="font-semibold underline underline-offset-4"
+            href="https://bit.ly/48LTNin"
+            target="_blank"
+          >
+            Public road map
+          </ButtonUI>
+          <ButtonUI
+            variant="secondary"
+            className="font-semibold"
+            href="https://nextsaas.app"
+            target="_blank"
+          >
+            See the demo app
+          </ButtonUI>
+        </div>
+      </BlockTitle.Wrapper>
       <div className="mx-auto mt-8 max-w-2xl gap-4 rounded-3xl ring-1 ring-gray-200 dark:ring-gray-700 sm:mt-12 lg:mx-0 lg:flex lg:max-w-none">
         <div className="p-8 dark:text-white sm:p-10 lg:flex-auto">
           <h1 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-100">

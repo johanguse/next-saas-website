@@ -2,9 +2,7 @@ import { productData } from '@/lib/fake-data/hero-parallax'
 
 import { HeroParallax } from '@/components/hero/hero-parallax'
 import Hero from '@/components/hero/hero-regular'
-import { BlockTitle } from '@/components/layout/main-title'
 import CtaSubscribe from '@/components/marketing/cta-subscribe'
-import FAQ from '@/components/marketing/faq'
 import Powered from '@/components/marketing/powered'
 import TempFeatures from '@/components/marketing/temp-features'
 import TempStack from '@/components/marketing/temp-stack'
@@ -24,23 +22,13 @@ export default async function IndexPage() {
       <TempFeatures className="my-24" />
       <TempStack className="mb-24" />
       <section id="pricing" className="py-24">
-        <BlockTitle.Wrapper className="mb-24">
-          <BlockTitle.Header elementType="h1">Pricing</BlockTitle.Header>
-          <BlockTitle.Title elementType="h2">
-            Buy once and build unlimited projects
-          </BlockTitle.Title>
-          <BlockTitle.Description>
-            Buy on pre-sale and save up to 35%
-          </BlockTitle.Description>
-          <BlockTitle.Background />
-          <BlockTitle.Separator />
-        </BlockTitle.Wrapper>
         <OneCardPricingTable />
         <div
           className="container mx-auto mt-4 max-w-7xl lg:px-8"
           id="pricing-paritydeals"
         ></div>
       </section>
+      {/* FAQ 
       <section className="mx-auto flex w-full flex-col px-6 py-10 md:w-10/12 md:py-40 lg:max-w-4xl">
         <div className="container mx-auto text-center">
           <BlockTitle.Wrapper className="mb-10">
@@ -59,6 +47,7 @@ export default async function IndexPage() {
           <FAQ />
         </div>
       </section>
+      */}
       <CtaSubscribe />
     </>
   )
