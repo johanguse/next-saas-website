@@ -185,7 +185,7 @@ export default function OneCardPricingTable() {
               </p>
               <Badge className="mb-6">
                 <span className="mr-1">Last update:</span>
-                <TimeAgo createdAt="June 15, 2024 06:00" />
+                <TimeAgo createdAt="June 15, 2024 14:50" />
               </Badge>
               <a
                 //href="https://buy.stripe.com/bIY9BE2cvgFb8CI288?prefilled_promo_code=LAUNCH"

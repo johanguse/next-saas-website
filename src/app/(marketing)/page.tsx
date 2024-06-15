@@ -3,11 +3,11 @@ import { productData } from '@/lib/fake-data/hero-parallax'
 import { HeroParallax } from '@/components/hero/hero-parallax'
 import Hero from '@/components/hero/hero-regular'
 import { BlockTitle } from '@/components/layout/main-title'
-import BentoGrid from '@/components/marketing/bento-grid'
 import CtaSubscribe from '@/components/marketing/cta-subscribe'
 import FAQ from '@/components/marketing/faq'
-import Features from '@/components/marketing/features'
 import Powered from '@/components/marketing/powered'
+import TempFeatures from '@/components/marketing/temp-features'
+import TempStack from '@/components/marketing/temp-stack'
 import OneCardPricingTable from '@/components/pricing/pricing-one-card'
 
 export default async function IndexPage() {
@@ -21,8 +21,8 @@ export default async function IndexPage() {
       >
         <Powered />
       </section>
-      <Features className="my-24" />
-      <BentoGrid className="mb-24" />
+      <TempFeatures className="my-24" />
+      <TempStack className="mb-24" />
       <section id="pricing" className="py-24">
         <BlockTitle.Wrapper className="mb-24">
           <BlockTitle.Header elementType="h1">Pricing</BlockTitle.Header>

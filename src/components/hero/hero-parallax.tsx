@@ -8,9 +8,7 @@ import Link from 'next/link'
 import { ProductType } from '@/lib/fake-data/hero-parallax'
 import { cn } from '@/lib/utils'
 
-import { AvatarsGroup } from '@/components/ui/avatar-group'
 import { buttonVariants } from '@/components/ui/button'
-import StarRating from '@/components/ui/star-rating'
 
 import { BlockTitle } from '@/components/layout/main-title'
 import SparklesText from '@/components/magicui/sparkles-text'
@@ -179,15 +177,19 @@ export const Header = () => {
             customers (43 Left)
           </p>
         </BlockTitle.Wrapper>
+        {/*
         <div className="mb-6 mt-4 flex flex-col items-center justify-center gap-2 md:flex-row">
           <div className="flex flex-col items-center">
             <AvatarsGroup />
           </div>
+          
           <div className="flex flex-col items-center gap-1 md:items-start">
             <StarRating />
             <p className="text-sm font-medium">7 users are already shipping</p>
           </div>
+          
         </div>
+        */}
         <div className="mt-20 flex">
           <div className="relative mx-auto size-10 animate-bounce">
             <Icons.chevronDown className="absolute -inset-1 size-10 animate-pulse rounded-full" />
