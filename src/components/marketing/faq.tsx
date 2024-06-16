@@ -7,40 +7,42 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion'
 
+import HTMLParser from 'react-html-parser'
+
 type FAQProps = {
   className?: string
 }
 
 const pricingFaqData = [
   {
-    id: 'item-1',
-    question: 'What is the cost of the free plan?',
+    id: 'item-0',
+    question: 'What is Next SaaS Template?',
     answer:
-      "Our free plan is completely free, with no monthly or annual charges. It's a great way to get started and explore our basic features.",
-  },
-  {
-    id: 'item-2',
-    question: 'How much does the Basic Monthly plan cost?',
-    answer:
-      'The Basic Monthly plan is priced at $15 per month. It provides access to our core features and is billed on a monthly basis.',
-  },
-  {
-    id: 'item-3',
-    question: 'What is the price of the Pro Monthly plan?',
-    answer:
-      'The Pro Monthly plan is available for $25 per month. It offers advanced features and is billed on a monthly basis for added flexibility.',
+      'A production-ready SaaS Starter boilerplate built on Next.js. It comes fully type-safe, with authentication, billing, ready made components and more, making it a great choice for your next project. It saves you time (~200 hours) and effort, letting you focus on your business.',
   },
   {
     id: 'item-4',
-    question: 'Do you offer any annual subscription plans?',
+    question: 'Where I can see the demo version?',
     answer:
-      'Yes, we offer annual subscription plans for even more savings. The Basic Annual plan is $144 per year, and the Pro Annual plan is $300 per year.',
+      'Check out our demo app: <a href="https://nextsaas.app" target="_blank">https://nextsaas.app</a>.',
   },
   {
-    id: 'item-5',
-    question: 'Is there a trial period for the paid plans?',
+    id: 'item-1',
+    question: 'Can I refund?',
     answer:
-      "We offer a 14-day free trial for both the Pro Monthly and Pro Annual plans. It's a great way to experience all the features before committing to a paid subscription.",
+      "Once you have been granted access to the GitHub repository, I cannot offer refunds. I highly recommend browsing through our extensive documentation and checking out the demo app to ensure you understand what you're purchasing. If you have any questions, please don't hesitate to ask!",
+  },
+  {
+    id: 'item-2',
+    question: 'Can I costomize the layout or colors?',
+    answer:
+      'Yes, it is built with high customizability in mind. We use TailwindCSS and ShadCN for styling, giving you full control over your design, components and colors.',
+  },
+  {
+    id: 'item-3',
+    question: 'Where I can find the documentation?',
+    answer:
+      'Check this link: <a href="https://nextsaas.app/docs" target="_blank">https://nextsaas.app/docs</a>',
   },
 ]
 
@@ -54,7 +56,7 @@ export default function FAQ({ className }: FAQProps) {
       {pricingFaqData.map((faqItem) => (
         <AccordionItem key={faqItem.id} value={faqItem.id}>
           <AccordionTrigger>{faqItem.question}</AccordionTrigger>
-          <AccordionContent>{faqItem.answer}</AccordionContent>
+          <AccordionContent>{HTMLParser(faqItem.answer)}</AccordionContent>
         </AccordionItem>
       ))}
     </Accordion>

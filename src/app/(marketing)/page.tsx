@@ -2,7 +2,9 @@ import { productData } from '@/lib/fake-data/hero-parallax'
 
 import { HeroParallax } from '@/components/hero/hero-parallax'
 import Hero from '@/components/hero/hero-regular'
+import { BlockTitle } from '@/components/layout/main-title'
 import CtaSubscribe from '@/components/marketing/cta-subscribe'
+import FAQ from '@/components/marketing/faq'
 import Powered from '@/components/marketing/powered'
 import TempFeatures from '@/components/marketing/temp-features'
 import TempStack from '@/components/marketing/temp-stack'
@@ -28,7 +30,6 @@ export default async function IndexPage() {
           id="pricing-paritydeals"
         ></div>
       </section>
-      {/* FAQ 
       <section className="mx-auto flex w-full flex-col px-6 py-10 md:w-10/12 md:py-40 lg:max-w-4xl">
         <div className="container mx-auto text-center">
           <BlockTitle.Wrapper className="mb-10">
@@ -47,7 +48,6 @@ export default async function IndexPage() {
           <FAQ />
         </div>
       </section>
-      */}
       <CtaSubscribe />
     </>
   )
