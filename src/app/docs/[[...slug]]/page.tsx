@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
+import { siteConfig } from '@/config/site'
+
 import { getPage, getPages } from '@/app/source'
 
 import { Content } from './content'
@@ -17,8 +19,10 @@ export default async function Page({
     notFound()
   }
 
+  const lastModifiedTime = siteConfig.lastUpdate
+
   return (
-    <DocsPage toc={page.data.toc}>
+    <DocsPage lastUpdate={new Date(lastModifiedTime)} toc={page.data.toc}>
       <DocsBody>
         <h1>{page.data.title}</h1>
         <Content code={page.data.body.code} />
