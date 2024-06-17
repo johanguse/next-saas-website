@@ -1,5 +1,6 @@
 import { ClassValue, clsx } from 'clsx'
 import ms from 'ms'
+import { env } from 'process'
 import { twMerge } from 'tailwind-merge'
 
 // https://hosnaqasmei.com/posts/nextjs14-blog-view-counter-and-minute-read
@@ -63,11 +64,8 @@ export function formatDateToISO(date: Date): string {
  * @returns A complete URL string.
  */
 export function absoluteUrl(path: string) {
-  if (typeof window !== 'undefined') return path
-  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}${path}`
-  return `http://localhost:${process.env.PORT ?? 3000}${path}`
+  return `${env.NEXT_PUBLIC_APP_URL}${path}`
 }
-
 /**
  * Calculates the time elapsed since a given date.
  * @param timestamp - The date to calculate from.
