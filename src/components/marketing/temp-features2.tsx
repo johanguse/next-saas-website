@@ -87,22 +87,22 @@ export default function TempFeatures2({ className }: { className?: string }) {
           <div className="rounded-lg border bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
             <h4 className="text-base font-bold">📰 SaaS Blog</h4>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-              A multi-language MDX-based blog is included to keep your customers
-              up to date with the latest news.
+              MDX-based blog is included to keep your customers up to date with
+              the latest news.
             </p>
           </div>
           <div className="rounded-lg border bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
             <h4 className="text-base font-bold">📚 SaaS Documentation</h4>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-              A multi-language MDX-based documentation is included to help your
-              customers to get started with your app.
+              MDX-based documentation is included to help your customers to get
+              started with your app.
             </p>
           </div>
           <div className="rounded-lg border bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
             <h4 className="text-base font-bold">📜 SaaS Legal Pages</h4>
             <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-              Multi-language placeholder pages for privacy policy and terms of
-              service are included.
+              Placeholder pages for privacy policy and terms of service are
+              included.
             </p>
           </div>
           <div className="rounded-lg border bg-white p-4 dark:border-gray-700 dark:bg-gray-800">
