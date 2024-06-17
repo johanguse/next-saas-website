@@ -190,7 +190,7 @@ export default function TempStack({ className }: { className?: string }) {
             <BlockTitle.Separator />
           </BlockTitle.Wrapper>
           <div className="mx-auto w-full max-w-full space-y-4">
-            <div className="mt-[calc(3.125rem_*_var(--mantine-scale))] grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
               {featuresWithIcons.map((feature, index) => (
                 <FeatureCard key={index} {...feature} />
               ))}

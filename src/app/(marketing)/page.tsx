@@ -6,8 +6,7 @@ import { BlockTitle } from '@/components/layout/main-title'
 import CtaSubscribe from '@/components/marketing/cta-subscribe'
 import FAQ from '@/components/marketing/faq'
 import Powered from '@/components/marketing/powered'
-import TempFeatures from '@/components/marketing/temp-features'
-import TempStack from '@/components/marketing/temp-stack'
+import TempFeatures2 from '@/components/marketing/temp-features2'
 import OneCardPricingTable from '@/components/pricing/pricing-one-card'
 
 export default async function IndexPage() {
@@ -21,8 +20,7 @@ export default async function IndexPage() {
       >
         <Powered />
       </section>
-      <TempFeatures className="my-24" />
-      <TempStack className="mb-24" />
+      <TempFeatures2 className="my-24" />
       <section id="pricing" className="py-24">
         <OneCardPricingTable />
         <div
