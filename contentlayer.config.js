@@ -1,10 +1,8 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import { defineDocumentType, makeSource } from 'contentlayer2/source-files'
+import { create, defaultConfig } from 'fumadocs-contentlayer/configuration'
 import GithubSlugger from 'github-slugger'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypePrettyCode from 'rehype-pretty-code'
-import rehypeSlug from 'rehype-slug'
-import remarkGfm from 'remark-gfm'
-import { visit } from 'unist-util-visit'
+
+const { Docs, Meta, contentDirPath, mdx } = create(defaultConfig)
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -37,54 +35,6 @@ const computedFields = {
     },
   },
 }
-
-export const Doc = defineDocumentType(() => ({
-  name: 'Doc',
-  filePathPattern: `docs/**/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    title: {
-      type: 'string',
-      required: true,
-    },
-    description: {
-      type: 'string',
-    },
-    published: {
-      type: 'boolean',
-      default: true,
-    },
-  },
-  computedFields,
-}))
-
-export const Guide = defineDocumentType(() => ({
-  name: 'Guide',
-  filePathPattern: `guides/**/*.mdx`,
-  contentType: 'mdx',
-  fields: {
-    title: {
-      type: 'string',
-      required: true,
-    },
-    description: {
-      type: 'string',
-    },
-    date: {
-      type: 'date',
-      required: true,
-    },
-    published: {
-      type: 'boolean',
-      default: true,
-    },
-    featured: {
-      type: 'boolean',
-      default: false,
-    },
-  },
-  computedFields,
-}))
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
@@ -179,67 +129,7 @@ export const Page = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-  contentDirPath: './content',
-  documentTypes: [Page, Doc, Guide, Post, Author],
-  mdx: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      rehypeSlug,
-      () => (tree) => {
-        visit(tree, (node) => {
-          if (node?.type === 'element' && node?.tagName === 'pre') {
-            const [codeEl] = node.children
-
-            if (codeEl.tagName !== 'code') return
-
-            node.__rawString__ = codeEl.children?.[0].value
-          }
-        })
-      },
-      [
-        rehypePrettyCode,
-        {
-          theme: 'github-dark',
-          keepBackground: false,
-          onVisitLine(node) {
-            // Prevent lines from collapsing in `display: grid` mode, and allow empty lines to be copy/pasted
-            if (node.children.length === 0) {
-              node.children = [{ type: 'text', value: ' ' }]
-            }
-          },
-        },
-      ],
-      () => (tree) => {
-        visit(tree, (node) => {
-          if (
-            (node?.type === 'element' && node?.tagName === 'figure') ||
-            (node?.tagName === 'element' && node?.tagName === 'fragment')
-          ) {
-            if (
-              !('data-rehype-pretty-code-figure' in node.properties) &&
-              !('data-rehype-pretty-code-fragment' in node.properties)
-            ) {
-              return
-            }
-
-            const preElement = node.children.at(-1)
-            if (preElement.tagName !== 'pre') {
-              return
-            }
-
-            preElement.properties['__rawString__'] = node.__rawString__
-          }
-        })
-      },
-      [
-        rehypeAutolinkHeadings,
-        {
-          properties: {
-            className: ['subheading-anchor'],
-            ariaLabel: 'Link to section',
-          },
-        },
-      ],
-    ],
-  },
+  contentDirPath,
+  mdx,
+  documentTypes: [Post, Docs, Meta, Author, Page],
 })

@@ -1,5 +1,6 @@
 'use client'
 
+import { RootProvider } from 'fumadocs-ui/provider'
 import { ThemeProvider as NextThemesProvider } from 'next-themes'
 import { ThemeProviderProps } from 'next-themes/dist/types'
 
@@ -8,5 +9,15 @@ interface ProvidersProps extends ThemeProviderProps {
 }
 
 export function Providers({ children, ...props }: ProvidersProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
+  return (
+    <NextThemesProvider {...props}>
+      <RootProvider
+        search={{
+          enabled: false,
+        }}
+      >
+        {children}
+      </RootProvider>
+    </NextThemesProvider>
+  )
 }

@@ -50,6 +50,7 @@ type FooterLink = {
 }
 
 export type SiteConfig = {
+  lastUpdate: string
   address: string
   name: string
   description: string

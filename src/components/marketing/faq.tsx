@@ -42,7 +42,7 @@ const pricingFaqData = [
     id: 'item-3',
     question: 'Where I can find the documentation?',
     answer:
-      'Check this link: <a href="https://nextsaas.app/docs" target="_blank">https://nextsaas.app/docs</a>',
+      'Check this link: <a href="https://nextsaastemplate.com/docs" target="_blank">https://nextsaastemplate.com/docs</a>',
   },
 ]
 

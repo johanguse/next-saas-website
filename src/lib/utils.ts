@@ -1,4 +1,3 @@
-import { env } from '@/root/env.mjs'
 import { ClassValue, clsx } from 'clsx'
 import ms from 'ms'
 import { twMerge } from 'tailwind-merge'
@@ -64,7 +63,9 @@ export function formatDateToISO(date: Date): string {
  * @returns A complete URL string.
  */
 export function absoluteUrl(path: string) {
-  return `${env.NEXT_PUBLIC_APP_URL}${path}`
+  if (typeof window !== 'undefined') return path
+  if (process.env.VERCEL_URL) return `https://${process.env.VERCEL_URL}${path}`
+  return `http://localhost:${process.env.PORT ?? 3000}${path}`
 }
 
 /**
