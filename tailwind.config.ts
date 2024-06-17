@@ -1,3 +1,5 @@
+import { createPreset } from 'fumadocs-ui/tailwind-plugin'
+
 const { fontFamily } = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
@@ -6,6 +8,8 @@ module.exports = {
     './node_modules/pliny/**/*.js',
     './src/**/*.{jsx,tsx}',
     './content/**/*.{md,mdx}',
+    './mdx-components.{ts,tsx}',
+    './node_modules/fumadocs-ui/dist/**/*.js',
   ],
   darkMode: ['class'],
   future: {
@@ -138,4 +142,5 @@ module.exports = {
     },
   },
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+  presets: [createPreset()],
 }
