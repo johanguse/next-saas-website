@@ -50,7 +50,7 @@ export default function Hero({ className }: { className?: string }) {
                 buttonVariants({ variant: 'secondary', size: 'lg' })
               )}
             >
-              See the demoaa
+              See the demo
             </Link>
           </div>
           <div className="mx-auto my-6 flex w-full justify-center">
