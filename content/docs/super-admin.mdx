@@ -1,0 +1,46 @@
+---
+title: Super Admin
+description: How to setup super admin.
+---
+
+Learn how to change your role to a super admin.
+
+Once you have authentication, stripe and the database setup, you can change your role to a super admin.
+
+To change your role to a super admin, you need to update the role in the database.
+
+## Steps
+
+<Steps>
+
+### Run the server
+
+```bash
+pnpm run dev
+```
+
+This will start all the development servers including the prisma studio.
+
+You can then navigate to the prisma studio at `http://localhost:5555`.
+
+### Create a user
+
+If you haven't already, create an account at `http://localhost:3000/register`.
+
+This will save the user in the database.
+
+### Change the role
+
+On the prisma studio, navigate to the User table and find the user you just created.
+
+You may need to click the refresh button to see the user.
+
+Click on the role cell and change the role to ADMIN.
+
+Save the changes.
+
+### Refresh the page
+
+Refresh the page at `http://localhost:3000` and click on the dropdown menu you will see the admin dashboard link.
+
+</Steps>
