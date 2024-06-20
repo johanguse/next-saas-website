@@ -13,7 +13,8 @@ export default function ButtonShareFeedback() {
       className={cn(buttonVariants({ variant: 'outline', size: 'sm' }), 'px-4')}
     >
       <MessageSquareText className="mr-2 size-4" />
-      <p>Share a feedback</p>
+      <span className="hidden md:block">Share a feedback</span>
+      <span className="flex md:hidden">Feedback</span>
     </Link>
   )
 }
