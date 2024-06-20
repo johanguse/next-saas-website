@@ -71,7 +71,7 @@ export const HeroParallax = ({
       ref={ref}
       className={
         className +
-        ' relative flex h-[225vh]  flex-col self-auto overflow-hidden pt-20 antialiased [perspective:1000px] [transform-style:preserve-3d]'
+        ' relative flex h-[225vh] flex-col self-auto overflow-hidden pt-20 antialiased [perspective:1000px] [transform-style:preserve-3d]'
       }
     >
       <Header />
@@ -93,7 +93,7 @@ export const HeroParallax = ({
             />
           ))}
         </motion.div>
-        <motion.div className="mb-10 flex  flex-row space-x-20 ">
+        <motion.div className="mb-10 flex flex-row space-x-20">
           {secondRow.map((product) => (
             <ProductCard
               product={product}
@@ -119,7 +119,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <>
-      <div className="relative left-0 top-0 z-50 mx-auto w-full max-w-7xl  px-4 py-10 md:py-20">
+      <div className="relative left-0 top-0 z-50 mx-auto w-full max-w-7xl px-4 py-10 md:py-20">
         <FollowTwiiterShineButton className="pb-10" />
         <BlockTitle.Wrapper>
           <BlockTitle.Header elementType="h1">Pre Sale</BlockTitle.Header>
@@ -141,7 +141,20 @@ export const Header = () => {
 
           <BlockTitle.Background />
 
-          <BlockTitle.Separator className="mb-20" />
+          <div className="mx-auto my-14 flex w-full justify-center">
+            <a
+              href="https://www.producthunt.com/posts/next-saas-template?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-next&#0045;saas&#0045;template"
+              target="_blank"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=464422&theme=light"
+                alt="Next&#0032;SaaS&#0032;Template - Launching&#0032;your&#0032;SaaS&#0032;success&#0032;story | Product Hunt"
+                style={{ width: '250px', height: '54px' }}
+                width="250"
+                height="54"
+              />
+            </a>
+          </div>
 
           <div className="z-50 mx-auto flex flex-row items-center justify-center gap-6 text-center">
             <Link
@@ -251,7 +264,7 @@ export const ProductCard = ({
       <Link
         href={product.link}
         target="_blank"
-        className="block group-hover/product:shadow-2xl "
+        className="block group-hover/product:shadow-2xl"
       >
         <Image
           src={imageUrl}
