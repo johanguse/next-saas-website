@@ -38,18 +38,18 @@ export function NavBar({
       <div className="container flex h-16 items-center justify-between py-4">
         <MainNav items={items}>{children}</MainNav>
 
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-1 md:space-x-3">
           {rightElements}
 
           <>
-            <ul className="mr-4 flex items-center space-x-4">
+            <ul className="mr-0 flex items-center space-x-1 md:mr-4 md:space-x-4">
               <li>
                 <ChangelogButton />
               </li>
               <li>
                 <ButtonShareFeedback />
               </li>
-              <li>
+              <li className="hidden md:block">
                 <ModeToggle />
               </li>
             </ul>
