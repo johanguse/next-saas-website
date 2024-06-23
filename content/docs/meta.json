@@ -1,15 +1,11 @@
 {
   "title": "ui",
-  "root": true,
   "pages": [
-    "---Guide---",
     "index",
-    "installation",
-    "super-admin",
-    "...",
-    "---Configuration---",
-    "...configuration",
+    "getting-started",
+    "configuration",
     "---Others---",
-    "[Demo](https://nextsaas.app)"
+    "[Demo](https://nextsaas.app)",
+    "[Buy now](https://nextsaastemplate.com)"
   ]
 }

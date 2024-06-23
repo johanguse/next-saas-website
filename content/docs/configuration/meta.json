@@ -1,0 +1,13 @@
+{
+  "title": "Configuration",
+  "pages": [
+    "database",
+    "config-files",
+    "subscriptions",
+    "authentication",
+    "email",
+    "blog",
+    "markdown-files",
+    "components"
+  ]
+}
